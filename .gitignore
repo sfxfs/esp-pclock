@@ -1,0 +1,9 @@
+# Folders
+build/
+.vscode/
+managed_components/
+
+# Files
+.DS_Store
+sdkconfig
+sdkconfig.old
