@@ -28,19 +28,20 @@ static const char *TAG = "main";
 //////////////////// Please update the following configuration according to your LCD Spec //////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Refresh Rate = 80000000/(40+140+40+800)/(4+16+16+1280) = 60Hz
-#define EXAMPLE_MIPI_DSI_DPI_CLK_MHZ  80
-#define EXAMPLE_MIPI_DSI_LCD_H_RES    800
-#define EXAMPLE_MIPI_DSI_LCD_V_RES    1280
-#define EXAMPLE_MIPI_DSI_LCD_HSYNC    40
-#define EXAMPLE_MIPI_DSI_LCD_HBP      140
-#define EXAMPLE_MIPI_DSI_LCD_HFP      40
-#define EXAMPLE_MIPI_DSI_LCD_VSYNC    4
-#define EXAMPLE_MIPI_DSI_LCD_VBP      16
-#define EXAMPLE_MIPI_DSI_LCD_VFP      16
+#define EXAMPLE_MIPI_DSI_DPI_CLK_MHZ  21
 
-#define EXAMPLE_MIPI_DSI_LANE_NUM          2    // 2 data lanes
-#define EXAMPLE_MIPI_DSI_LANE_BITRATE_MBPS 1000 // 1Gbps
+#define EXAMPLE_MIPI_DSI_LCD_H_RES    480
+#define EXAMPLE_MIPI_DSI_LCD_HSYNC    4
+#define EXAMPLE_MIPI_DSI_LCD_HBP      26
+#define EXAMPLE_MIPI_DSI_LCD_HFP      20
+
+#define EXAMPLE_MIPI_DSI_LCD_V_RES    640
+#define EXAMPLE_MIPI_DSI_LCD_VSYNC    4
+#define EXAMPLE_MIPI_DSI_LCD_VBP      14
+#define EXAMPLE_MIPI_DSI_LCD_VFP      8
+
+#define EXAMPLE_MIPI_DSI_LANE_NUM          1    // 1 data lane
+#define EXAMPLE_MIPI_DSI_LANE_BITRATE_MBPS 1000 // 1GMbps
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////// Please update the following configuration according to your Board Design //////////////////////////
