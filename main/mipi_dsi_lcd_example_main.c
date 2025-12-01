@@ -28,20 +28,20 @@ static const char *TAG = "main";
 //////////////////// Please update the following configuration according to your LCD Spec //////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#define EXAMPLE_MIPI_DSI_DPI_CLK_MHZ  21
+#define EXAMPLE_MIPI_DSI_DPI_CLK_MHZ  25
 
 #define EXAMPLE_MIPI_DSI_LCD_H_RES    480
-#define EXAMPLE_MIPI_DSI_LCD_HSYNC    4
-#define EXAMPLE_MIPI_DSI_LCD_HBP      26
-#define EXAMPLE_MIPI_DSI_LCD_HFP      20
+#define EXAMPLE_MIPI_DSI_LCD_HSYNC    10
+#define EXAMPLE_MIPI_DSI_LCD_HBP      30
+#define EXAMPLE_MIPI_DSI_LCD_HFP      30
 
 #define EXAMPLE_MIPI_DSI_LCD_V_RES    640
-#define EXAMPLE_MIPI_DSI_LCD_VSYNC    4
-#define EXAMPLE_MIPI_DSI_LCD_VBP      14
-#define EXAMPLE_MIPI_DSI_LCD_VFP      8
+#define EXAMPLE_MIPI_DSI_LCD_VSYNC    8
+#define EXAMPLE_MIPI_DSI_LCD_VBP      50
+#define EXAMPLE_MIPI_DSI_LCD_VFP      50
 
 #define EXAMPLE_MIPI_DSI_LANE_NUM          1    // 1 data lane
-#define EXAMPLE_MIPI_DSI_LANE_BITRATE_MBPS 1000 // 1GMbps
+#define EXAMPLE_MIPI_DSI_LANE_BITRATE_MBPS 700  // 700Mbps
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////// Please update the following configuration according to your Board Design //////////////////////////
