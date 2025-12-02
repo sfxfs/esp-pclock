@@ -21,6 +21,7 @@
 #include "esp_log.h"
 #include "lvgl.h"
 #include "esp_lcd_st7701.h"
+#include "pca9557.h"
 
 static const char *TAG = "main";
 
@@ -72,6 +73,7 @@ static const char *TAG = "main";
 
 // LVGL library is not thread-safe, this example will call LVGL APIs from different tasks, so use a mutex to protect it
 static _lock_t lvgl_api_lock;
+static i2c_dev_t pca9536_dev;
 
 extern void example_lvgl_demo_ui(lv_display_t *disp);
 
@@ -149,6 +151,8 @@ static void example_bsp_init_lcd_backlight(void)
     };
     ESP_ERROR_CHECK(gpio_config(&bk_gpio_config));
 #endif
+    ESP_ERROR_CHECK(pca9557_init_desc(&pca9536_dev, PCA9536_I2C_ADDR, I2C_NUM_0, 7, 8));
+    ESP_ERROR_CHECK(pca9557_set_mode(&pca9536_dev, 1, PCA9557_MODE_OUTPUT));
 }
 
 static void example_bsp_set_lcd_backlight(uint32_t level)
@@ -156,6 +160,7 @@ static void example_bsp_set_lcd_backlight(uint32_t level)
 #if EXAMPLE_PIN_NUM_BK_LIGHT >= 0
     gpio_set_level(EXAMPLE_PIN_NUM_BK_LIGHT, level);
 #endif
+    ESP_ERROR_CHECK(pca9557_set_level(&pca9536_dev, 1, level));
 }
 
 #if CONFIG_EXAMPLE_MONITOR_REFRESH_BY_GPIO

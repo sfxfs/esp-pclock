@@ -2,7 +2,8 @@ dependencies:
   lvgl/lvgl: 9.4.0
   espressif/esp_lcd_st7701:
     version: '*'
-    override_path: '../components/esp_lcd_st7701'
+    override_path: ../components/esp_lcd_st7701
   espressif/esp_hosted: ^2.6.6
   espressif/esp-extconn: ^0.3.3
   espressif/esp_wifi_remote: ^1.2.1
+  esp-idf-lib/pca9557: ^1.0.7
