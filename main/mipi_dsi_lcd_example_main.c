@@ -251,6 +251,8 @@ void app_main(void)
     lv_display_set_user_data(display, mipi_dpi_panel);
     // set color depth
     lv_display_set_color_format(display, LV_COLOR_FORMAT_RGB888);
+    // rotate the screen 90 degrees
+    lv_display_set_rotation(display, LV_DISPLAY_ROTATION_90);
     // create draw buffer
     void *buf1 = NULL;
     void *buf2 = NULL;
